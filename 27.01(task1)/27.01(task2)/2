@@ -1,0 +1,39 @@
+using System;
+
+namespace 3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            int[] numbers = { 5, 21, 96, 27, 83, 11, 84, 44 };
+
+            double sum = 0;
+            double count = 0;
+
+            double average;
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i]%21 == 0)
+                {
+                    sum += numbers[i];
+                    count++;
+                }
+            }
+
+            if (count == 0)
+            {
+                Console.WriteLine("21 e bolunen eded yoxdur");
+            }
+            else
+            {
+                average = sum / count;
+                Console.WriteLine(average);
+            }
+
+            
+        }
+    }
+}
